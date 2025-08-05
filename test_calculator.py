@@ -78,7 +78,7 @@ import pytest  # so first imoprt the pytest module
 def test_str():
     with pytest.raises(TypeError):
         square("cat")
-
+# if if we raise any error and we need to test it so we use this
 
 
 

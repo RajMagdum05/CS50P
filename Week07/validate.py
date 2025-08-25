@@ -103,4 +103,28 @@ if re.search(r"^\w+@(\w+\.)?\.edu$", email, re.IGNORECASE):
     print("Valid")
 else:
     print("Invalid")
+
+# builtin variables constants
+# re.IGNORECASE
+# re.MULTILINE
+# re.DOTALL
+# these are the flags for the re module
+
+## cleaning input and string it
+# user type inputs but it is not how programmer want it
+# i wan to to store -> david malan
+# but user can enter -> malan, david or malan,david and all the corner cases
+
+import re
+name = input("What's your name? ").strip()
+# malan, david
+# if "," in name:
+#     last, first = name.split(",")
+#     name = f"{first} {last}"
+# print(f"hello,{name}")
+
+# malan,david having no space
+# so we use regular expressions so that it will be easy to handle most of the cases.
+
+matches = re.search(r"^(.+), (.+)$", name)    
     

@@ -6,7 +6,7 @@ price1 = 30000.143768
 price2 = -300000000.56
 
 print(f"Price 1 is ${price1:.2f}") # to include only 2 decimal no.s
-print(f"Price 2 is ${price2:.3f}") # for 3 decimal no.s
+print(f"Price 2 is ${price2:.3f}") # for 3 decimal no.s, it will add 0 here at 3rd place
 
 print(f"Price 1 is ${price1:10}") # it will make that integer value to 10 places
 print(f"Price 2 is ${price2:4}") # it will not make shorter than existing length
@@ -33,3 +33,4 @@ print(f"Price 1 is ${price1:,}")
 
 # We can add multiple format specifiers in go also
 print(f"Price 1 is ${price1:+,.2f}") # just give format specifiers one by one dont give , btw all
+

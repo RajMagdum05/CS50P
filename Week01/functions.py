@@ -18,10 +18,10 @@ happy_birthday("Raj", 21)
 def create_name(first, last):
     return first.capitalize() + " " + last.capitalize()
 
-print(create_name("raj", "magdum"))
+print(create_name("raj", "magdum")) #Raj Magdum
 
 # --- Default Arguments ---
-def net_price(list_price, discount=0, tax=0.05):
+def net_price(list_price, discount=0, tax=0.05): # here discount and tax are default
     return list_price * (1 - discount) * (1 + tax)
 
 print(net_price(500))          # default discount & tax
@@ -63,3 +63,4 @@ def shipping_table(*args, **kwargs):
         print(f"{key}: {value}")
 
 shipping_table("Hello", "Raj", city="Ich", pincode="416143")
+

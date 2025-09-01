@@ -40,19 +40,22 @@ print(f"You entered {n}")
 
 # Basic examples
 for i in range(3):
-    print("meow")
+    print("meow") # prints meow 3 times and print comes with new line
 
 # Using underscore when variable not needed
 for _ in range(3):
     print("meow")
 
 # Iterating with step
-for x in range(1, 11, 2):
-    print(x)
+for x in range(1, 11, 2): # 1 included and goes upto 10 and iterates with 2 places i.e i+2
+    print(x)   # if we dont put anything in 3rd place then it will increaments by 1 place
 
 # Reverse iteration
 for x in reversed(range(1, 11, 3)):
     print(x)
+# reversed(range(1, 11)) -> so will print from 1 to 10 only but reversed i.e. 10 to 1
+# range(11, 1) -> empty range not returns anything 
+# range(11, 1, -1) -> so it starts with 11 and upto 2 and 1 is not included
 
 # Looping over a string
 credit_card = "1234-5678-9876-2341"
@@ -114,3 +117,4 @@ print("Squares:", squares)
 nums = [1, -2, 3, -4, 5]
 positives = [n for n in nums if n > 0]
 print("Positive numbers:", positives)
+

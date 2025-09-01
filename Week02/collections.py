@@ -13,8 +13,8 @@ print(len(fruits))       # 4
 print("apple" in fruits) # True
 
 fruits.append("pineapple")
-fruits.insert(0, "kiwi")
-fruits.sort()
+fruits.insert(0, "kiwi") # insert kiwi at index 0
+fruits.sort() # sorts alphabetically
 print("Sorted:", fruits)
 
 # Iterating with index
@@ -34,7 +34,7 @@ fruits_set.add("pineapple")
 print("Set:", fruits_set)
 
 # Membership check
-print("apple" in fruits_set)
+print("apple" in fruits_set) # True or False
 
 # Iteration
 for fruit in fruits_set:
@@ -62,12 +62,14 @@ print(capitals["India"])         # New Delhi
 print(capitals.get("Japan"))     # None
 
 capitals.update({"Germany": "Berlin"})
-capitals.pop("China")
+capitals.pop("China") # removes item
 print(capitals)
 
 for country, city in capitals.items():
     print(country, city)
-
+# for only key -> capitals.keys()
+# for only value -> capitals.values()
+# use parathesis after the functions
 
 # Hogwarts Example (CS50P)
 students = {
@@ -111,3 +113,4 @@ for category in foods:
     for item in category:
         print(item, end=" ")
     print()
+

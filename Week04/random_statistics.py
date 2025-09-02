@@ -37,3 +37,8 @@ print("Mode:", statistics.mode(marks))
 - random helps simulate unpredictability
 - statistics helps analyze data
 """
+# we can directly import specific function from module
+from random import choice
+
+coin = choice(["heads", "tails"])
+print(coin)

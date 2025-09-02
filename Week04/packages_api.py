@@ -16,6 +16,7 @@ File 3: packages_apis.py
 - Looks like Python dict but with strings
 """
 
+# pip install requests
 import cowsay
 import requests
 import json
@@ -43,3 +44,4 @@ print(json_string[:500])  # print only part
 - APIs allow us to fetch real-world data
 - JSON is used for communication between servers and programs
 """
+

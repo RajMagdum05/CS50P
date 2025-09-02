@@ -15,6 +15,7 @@
 # x = int("cat")   # ValueError: invalid literal for int()
 
 # -----------------------------------
+# In Python try and except are ways of testing out user input before something goes wrong.
 # ValueError with try-except
 try:
     x = int(input("Enter x: "))
@@ -40,3 +41,13 @@ except ValueError:
     print("x is not an integer")
 else:
     print(f"x is {x}")  # Runs only if no error
+
+# prompt the user again to enter by using loop
+while True:
+    try:
+        x = int(input("Enter x: "))
+    except ValueError:
+        print("x is not an integer")
+    else:
+        break
+print(f"x is {x}")

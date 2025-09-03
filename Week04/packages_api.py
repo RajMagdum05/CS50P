@@ -10,6 +10,7 @@ File 3: packages_apis.py
 - API = Application Programming Interface
 - Allows programs to talk to each other
 - Example: iTunes API → get song info
+- so these cowsay, requests are APIs that are programmed generally and we can use it in our program directly just by calling it.
 
 👉 What is JSON?
 - Data format for communication

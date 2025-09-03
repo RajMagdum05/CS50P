@@ -53,7 +53,7 @@ print("hello, my name is", sys.argv[1])
 if len(sys.argv) < 2:
     sys.exit("Too few arguments")
 
-for arg in sys.argv:
+for arg in sys.argv: # sys.argv is list
     print("hello, my name is", arg)
 
 # but here as sys.argv[0] is name.py so it will also be printed at first

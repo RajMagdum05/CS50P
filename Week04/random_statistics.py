@@ -1,3 +1,4 @@
+# To use any library or module we first need to install it using -> pip install module_name
 """
 Week 4 - Libraries
 File 2: random_statistics.py
@@ -43,3 +44,4 @@ from random import choice
 
 coin = choice(["heads", "tails"])
 print(coin)
+

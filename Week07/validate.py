@@ -1,15 +1,15 @@
 
 #* regex - patterns, email is formatted correctly or not 
 
-# email = input("Enter your Email: ").strip()
+email = input("Enter your Email: ").strip()
 # #strip will remove whitespaces from right and left i.e beginning and ending of the input
  
-# username, domain = email.split("@")
+username, domain = email.split("@")
 
-# if username and domain.endswith(".edu"):
-#     print("Valid")
-# else:
-#     print("Invalid")
+if username and domain.endswith(".edu"):
+    print("Valid")
+else:
+    print("Invalid")
 
 #* so instead of applying logic for each corner case python has library for it
 #* re -> regular expressions-> by using patterns it finds email is valid or not

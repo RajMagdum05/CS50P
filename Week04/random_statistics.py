@@ -26,6 +26,7 @@ cards = ["A", "K", "Q", "J"]
 random.shuffle(cards)
 print("Shuffled cards:", cards)
 
+# These are functions of module random so they can be accessed by ().
 # Example 4: Statistics calculations
 marks = [85, 90, 78, 92, 88, 90]
 print("Mean:", statistics.mean(marks))

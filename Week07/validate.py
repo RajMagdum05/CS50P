@@ -24,27 +24,27 @@ import re
 email = input("Enter email: ").strip() 
 # these 2 lines will remain permanant
 
-# if re.search("@", email, flags=0):
-#     print("Valid")
-# else:
-#     print("Invalid")
+if re.search("@", email, flags=0):
+    print("Valid")
+else:
+    print("Invalid")
 
-# so to write regular expression perfect so every corner case should solved
+# so to write regular expression perfect so every corner case should be solved
 # we use these functions or patterns
-#* .   any character except a new line
+#  .   any character except a new line
 #  *   0 or more repetitions
-#* +   1 or more repetitions
-#* ?   0 or 1 repetition
-#* {m} m repetitions
-#* {m,n} m-n repetitions
+#  +   1 or more repetitions
+#  ?   0 or 1 repetition
+#  {m} m repetitions
+#  {m,n} m-n repetitions
 
-# if re.search(".+@.+", email):
+if re.search(".+@.+", email):
 # so now it only cares about left and right of @ it should be characters
 
-# if re.search(".+@.+.edu", email): #any char, 1 or more time then @ then again any char one or more time then any char then edu
+if re.search(".+@.+.edu", email): #any char, 1 or more time then @ then again any char one or more time then any char then edu
 
 # so here . have special meaning in re so to use it as it is like literally . and not any char
-#* use \ before it. then it will not consider it as re
+# use \ before it. then it will not consider it as re -> \.
 # like f for formatting use r here which means raw string
 # means i want to pass things exactly like this
 
@@ -52,19 +52,19 @@ email = input("Enter email: ").strip()
 
 # but this is also not fully correct
 
-#* ^ -> starts with  ^The
-#* $ -> ending with  end$
+# ^ (caret) -> starts with  ^The
+# $ (dollar )-> ending with  end$
 
-# if re.search(r"^.+@.+\.edu$", email):
+if re.search(r"^.+@.+\.edu$", email):
 
-#* [] set of caracters means these set of char are allowed
+#* [] set of caracters means these set of char are allowed. [abc] or [0-9]
 #* [^] these set of char are not allowed e.g. [^@] any char except @
 # dont need to give "" to chars
 # ("^[^@]+@[^@]+\.edu") -> it should start with any char except @ then @ then again same and then endwith .edu
 
-#if re.search(r"^[a-zA-Z0-9_]+@[a-zA_Z0-9_]+\.edu$", email):
+if re.search(r"^[a-zA-Z0-9_]+@[a-zA_Z0-9_]+\.edu$", email):
 
-#so instead of writing alphabets, numbers and _ is allowed and for other:
+#so instead of writing alphabets, numbers and _ is allowed and for other: \w
 #* \d    decimal digit
 #* \D    not a decimal digit
 #* \s    whitespace characters
@@ -72,10 +72,10 @@ email = input("Enter email: ").strip()
 #* \w    word character, as well as numbers and the underscore
 #* \W    not a word character
 
-# if re.search(r"^\w+@\w+\.edu$", email):
-#     print("Valid")
-# else:
-#     print("Invalid")
+if re.search(r"^\w+@\w+\.edu$", email):
+    print("Valid")
+else:
+    print("Invalid")
 
 # if we want .edu, .com, .gov is allowed so we can group them using ()
 #* | -> is used and not or
@@ -84,20 +84,20 @@ email = input("Enter email: ").strip()
 #* (...)   a group
 #* (?:...) non-capturing version
 
-# if re.search(r"^\w+@\w+\.(edu|com|gov|net|org)$", email):
-#     print("Valid")
-# else:
-#     print("Invalid")
+if re.search(r"^\w+@\w+\.(edu|com|gov|net|org)$", email):
+    print("Valid")
+else:
+    print("Invalid")
 
 #* (\w | \s) so word characters and white space is allowed so we can group them together
 
 # for case sensitivity
 # if user inputs everything uppercase using EDU then it might be problem
 ##* flags -> re.IGNORECASE
-# if re.search(r"^\w+@\w+\.edu$", email, re.IGNORECASE):
-#     print("Valid")
-# else:
-#     print("Invalid")
+if re.search(r"^\w+@\w+\.edu$", email, re.IGNORECASE):
+    print("Valid")
+else:
+    print("Invalid")
 
 #* within re.search function these flags can be used
 #* re.IGNORECASE
@@ -106,9 +106,10 @@ email = input("Enter email: ").strip()
 
 #* malan@cs50.harvard.edu for this ->
 # group (\w+\.)?      ?-> 0 or 1
-if re.search(r"^\w+@(\w+\.)?\.edu$", email, re.IGNORECASE):
+if re.search(r"^\w+@(\w+\.)?\w+\.edu$", email, re.IGNORECASE):
     print("Valid")
 else:
     print("Invalid")
+
 
 ## other functions from module re -> re.match, re.fullmatch 

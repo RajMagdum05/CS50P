@@ -127,3 +127,13 @@ def main():
 # Call main
 main()
 
+# Hexadecimal and Binary conversion
+x = 255
+print(f"Decimal: {x}, Hex: {x:#x}, Binary: {x:#b}")
+# output -> Hex: 0xff, Binary: 0b11111111
+# Hex -> base 16 digits 0-9 and letters a-f so it converts decimal to hexadecimal
+# same for binary and octal
+
+x = 10
+print(f"Octal: {x:#o}")
+# output -> Octaal: 0o12

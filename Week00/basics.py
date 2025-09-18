@@ -85,6 +85,9 @@ import math
 num = -3.7
 
 print(round(num))       # Nearest integer
+# print(round(4.5)) -> 4
+# print(rount(5.5)) -> 6
+# so it rounds to nearest even integer
 print(math.ceil(num))   # Round up
 print(math.floor(num))  # Round down
 print(abs(num))         # Absolute value
@@ -123,3 +126,4 @@ def main():
 
 # Call main
 main()
+

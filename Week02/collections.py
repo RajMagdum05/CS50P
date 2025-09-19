@@ -1,4 +1,10 @@
-# ============================================
+# Mutability Recap
+
+# Tuple: Immutable (can’t change elements)
+# Set: Mutable (can add/remove)
+# Dict: Mutable (can add/remove/change values, but keys must be immutable)
+
+# # ============================================
 # 📌 Week 2 - Collections (CS50P + My Notes)
 # ============================================
 
@@ -29,6 +35,33 @@ for fruit in fruits:
 # -----------------------------
 # 2. Sets
 # -----------------------------
+# Unordered collection (no indexing)
+# Unique elements only (automatically removes duplicates)
+# Mutable → can add/remove items
+
+# Creating a set
+numbers = {1, 2, 3, 3, 4}
+print(numbers)   # {1, 2, 3, 4}
+
+# Add element
+numbers.add(5)
+
+# Remove element
+numbers.remove(2)     # ❌ Error if 2 not in set
+numbers.discard(10)   # ✅ Safe remove
+
+# Check membership
+print(3 in numbers)   # True
+
+# ste operations
+a = {1, 2, 3}
+b = {3, 4, 5}
+
+print(a | b)   # Union → {1,2,3,4,5}
+print(a & b)   # Intersection → {3}
+print(a - b)   # Difference → {1,2}
+
+
 fruits_set = {"apple", "orange", "banana"}
 fruits_set.add("pineapple")
 print("Set:", fruits_set)
@@ -44,10 +77,24 @@ for fruit in fruits_set:
 # -----------------------------
 # 3. Tuples
 # -----------------------------
+# Ordered collection
+# Immutable → once created, cannot change values
+# Can store duplicates
+# Useful for fixed data
+# Creating a tuple
+point = (3, 4)
+
+print(point[0])   # 3
+print(point[1])   # 4
+
+# point[0] = 10 ❌ Error: Tuples cannot be changed
+
 fruits_tuple = ("apple", "orange", "banana", "orange")
 print(fruits_tuple[1])  # orange
 print(fruits_tuple.count("orange"))  # 2
 
+#Return multiple values from functions
+#Represent fixed pairs (like coordinates, RGB values, database rows)
 
 # -----------------------------
 # 4. Dictionaries
@@ -64,6 +111,9 @@ print(capitals.get("Japan"))     # None
 capitals.update({"Germany": "Berlin"})
 capitals.pop("China") # removes item
 print(capitals)
+
+# Update value
+student["age"] = 21
 
 for country, city in capitals.items():
     print(country, city)
@@ -113,4 +163,5 @@ for category in foods:
     for item in category:
         print(item, end=" ")
     print()
+
 
